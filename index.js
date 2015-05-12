@@ -8,7 +8,6 @@ function Indicator(elem, options) {
     '<circle class="indicator-circle" fill="transparent" stroke="grey" opacity="0.1" clip-path="url(#cut-off-bottom)"/>',
     '<defs><clipPath id="cut-off-bottom"><circle class="clipping-circle"></circle></clipPath></defs>',
     '<path class="indicator-arc" fill="transparent"></path>',
-    //'<text x="50%" y="50%" class="indicator-number-alt">700</text>',
     '</svg>',
     '<div class="indicator-number">',
     '<span class="indicator-number-inner"></span>',
@@ -29,7 +28,7 @@ function Indicator(elem, options) {
   this.setPercent(this.percent);
 
 }
-
+//defaults
 Indicator.prototype.percent = 30;
 Indicator.prototype.startDegree = 50;
 Indicator.prototype.anticlockwise = 1;
