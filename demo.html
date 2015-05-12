@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -12,14 +11,24 @@
 
   <body>
      <div id="indicator"></div>
+     <label class="percent-form" for="percent">Type a percent: 
+       <input  min="0" max="100" id="percent" name="percent">
+     </label>
      
      <script>
       var elem = document.getElementById('indicator');
       var indicator = new Indicator( elem, {
         percent: 32,
         startDegree: 40,
-      }
-      );
+      });
+
+      document.getElementById('percent').addEventListener('input', function(){
+        if(this.value <= 100){
+          indicator.setPercent(this.value);
+          indicator.indicatorNumIn.innerHTML = this.value;
+        }
+      });
+
     </script>
   </body>
 
