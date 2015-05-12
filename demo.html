@@ -1,1 +1,26 @@
 
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index.css"/>
+    <script src="index.js"></script>
+  </head>
+
+  <body>
+     <div id="indicator"></div>
+     
+     <script>
+      var elem = document.getElementById('indicator');
+      var indicator = new Indicator( elem, {
+        percent: 32,
+        startDegree: 40,
+      }
+      );
+    </script>
+  </body>
+
+</html>
