@@ -1,1 +1,15 @@
 
+#indicator{
+  width: 180px;
+  height: 180px;
+  position: relative;
+  margin: 10% auto;
+}
+
+.percent-form{
+  display: block;
+  width: 22%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Verdana;
+}
