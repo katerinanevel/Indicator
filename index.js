@@ -41,11 +41,11 @@ Indicator.prototype.setPercent = function(p) {
   var endDegree;
   var radius = this.elem.clientHeight / 2;
 
- if (this.anticlockwise) {
-    endDegree = this.startDegree - degrees;
- } else {
-    endDegree = this.startDegree + degrees;
-}
+  if (this.anticlockwise) {
+     endDegree = this.startDegree - degrees;
+  } else {
+     endDegree = this.startDegree + degrees;
+  }
   
   var coordsStart = findCoords(this.startDegree, radius);
   var coordsEnd = findCoords(endDegree, radius);
