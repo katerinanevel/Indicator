@@ -21,9 +21,9 @@ function Indicator(elem, options) {
   this.indicatorNum = this.elem.querySelector('.indicator-number');
   this.indicatorNumIn = this.elem.querySelector('.indicator-number-inner');
   
-  setCircAtt(this.elem.clientHeight/2, this.indicatorCirc);
-  setCircAtt(this.elem.clientHeight/2, this.clippingCirc);
-  this.indicatorCirc.setAttribute('stroke-width', this.width*2);
+  setCircAtt(this.elem.clientHeight / 2, this.indicatorCirc);
+  setCircAtt(this.elem.clientHeight / 2, this.clippingCirc);
+  this.indicatorCirc.setAttribute('stroke-width', this.width * 2);
   this.indicatorNumIn.innerHTML = this.percent;
   this.setPercent(this.percent);
 
