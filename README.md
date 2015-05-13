@@ -29,7 +29,7 @@ var indicator = new Indicator( elem, {
 <tr>
 <td><code>percent</code></td>
 <td><code></code></td>
-<td>Define prigress</td>
+<td>Define percent</td>
 </tr>
 <tr>
 <td><code>startDegree</code></td>
