@@ -12,7 +12,7 @@
   <body>
      <div id="indicator"></div>
      <label class="percent-form" for="percent">Type a percent: 
-       <input  min="0" max="100" id="percent" name="percent">
+       <input  min="0" max="100" type="range" id="percent" name="percent">
      </label>
      
      <script>
@@ -23,10 +23,8 @@
       });
 
       document.getElementById('percent').addEventListener('input', function(){
-        if(this.value <= 100){
-          indicator.setPercent(this.value);
-          indicator.indicatorNumIn.innerHTML = this.value;
-        }
+        this.value == 100 ? indicator.setPercent(100) : indicator.setPercent(this.value);
+        indicator.indicatorNumIn.innerHTML = this.value;
       });
 
     </script>
