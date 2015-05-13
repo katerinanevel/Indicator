@@ -5,11 +5,14 @@
   position: relative;
   margin: 10% auto;
 }
-
-.percent-form{
+.percent-form {
   display: block;
-  width: 22%;
+  max-width: 50%;
   margin-left: auto;
   margin-right: auto;
   font-family: Verdana;
+}
+input[type=range] {
+  display: inline-block;
+  vertical-align: middle;
 }
