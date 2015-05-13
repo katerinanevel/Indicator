@@ -37,26 +37,37 @@ Indicator.prototype.width = '20';
 
 
 Indicator.prototype.setPercent = function(p) {
-  var degrees = p / 100 * 360;
-  var endDegree;
-  var radius = this.elem.clientHeight / 2;
-
-  if (this.anticlockwise) {
-     endDegree = this.startDegree - degrees;
-  } else {
-     endDegree = this.startDegree + degrees;
-  }
   
-  var coordsStart = findCoords(this.startDegree, radius);
-  var coordsEnd = findCoords(endDegree, radius);
-  var reverse = this.startDegree > endDegree;
+  var endDegree;
+  var d;
+  
+  if (p !== 100) {
+    this.indicatorCirc.setAttribute('stroke', 'grey');
+    this.indicatorCirc.setAttribute('opacity', 0.1);
+    
+    var degrees = p / 100 * 360;
+    var radius = this.elem.clientHeight / 2;
 
-  var d = 'M' + coordsStart + ' ' + 'A' + radius + ' ' + radius + ' 0 ' + ' ' + (Math.abs(this.startDegree - endDegree) > 180 ? 1 : 0) + ' ' + (reverse ? 0 : 1) + ' ' + coordsEnd;
+    if (this.anticlockwise) {
+      endDegree = this.startDegree - degrees;
+    } else {
+      endDegree = this.startDegree + degrees;
+    }
 
-  this.indicatorArc.setAttribute('d', d);
-  this.indicatorArc.setAttribute('clip-path', 'url(#cut-off-bottom)');
-  this.indicatorArc.setAttribute('stroke', this.color);
-  this.indicatorArc.setAttribute('stroke-width', this.width*2);
+    var coordsStart = findCoords(this.startDegree, radius);
+    var coordsEnd = findCoords(endDegree, radius);
+    var reverse = this.startDegree > endDegree;
+
+    d = 'M' + coordsStart + ' ' + 'A' + radius + ' ' + radius + ' 0 ' + ' ' + (Math.abs(this.startDegree - endDegree) > 180 ? 1 : 0) + ' ' + (reverse ? 0 : 1) + ' ' + coordsEnd;
+
+    this.indicatorArc.setAttribute('d', d);
+    this.indicatorArc.setAttribute('clip-path', 'url(#cut-off-bottom)');
+    this.indicatorArc.setAttribute('stroke', this.color);
+    this.indicatorArc.setAttribute('stroke-width', this.width * 2);
+  } else {
+    this.indicatorCirc.setAttribute('stroke', this.color);
+    this.indicatorCirc.setAttribute('opacity', 1);
+  }
 }
 
 
