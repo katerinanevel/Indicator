@@ -3,6 +3,14 @@ svg circle indicator
 
 <a href="http://katerinanevel.github.io/Indicator/">Demo</a>
 
+# Example
+
+<code>var elem = document.getElementById('indicator');
+      var indicator = new Indicator( elem, {
+        percent: 32,
+        startDegree: 40,
+      });</code>
+
 # Options
 
 <table>
