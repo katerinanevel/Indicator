@@ -5,11 +5,11 @@ svg circle indicator
 
 # Example
 
-<code>var elem = document.getElementById('indicator');
+<code><pre>var elem = document.getElementById('indicator');
       var indicator = new Indicator( elem, {
         percent: 32,
         startDegree: 40,
-      });</code>
+      });<pre></code>
 
 # Options
 
