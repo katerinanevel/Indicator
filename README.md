@@ -9,7 +9,7 @@ svg circle indicator
 var elem = document.getElementById('indicator');
 var indicator = new Indicator( elem, {
    percent: 32,
-   startDegree: 40,
+   startDegree: 40
 })
 </pre>
 
