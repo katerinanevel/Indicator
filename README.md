@@ -5,6 +5,9 @@ svg circle indicator
 
 # Options
 
+<table>
+<thead>
+<tr>
 <th>Param</th>
 <th>Default</th>
 <th>Description</th>
