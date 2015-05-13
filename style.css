@@ -1,4 +1,6 @@
-
+body{
+  text-align: center;
+}
 #indicator{
   width: 180px;
   height: 180px;
@@ -7,9 +9,6 @@
 }
 .percent-form {
   display: block;
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
   font-family: Verdana;
 }
 input[type=range] {
